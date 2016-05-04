@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+<!-- Blog specific styles to pull rss feeds from blog sites -->
+{% block extra_styles %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<!-- Box Zoom for Blog Posts. Move to css file if you want to reuse it. -->
+<style>
+    .box {
+          position: relative;
+          display: inline-block;  z-index: 1;
+          box-shadow: 0 0px 0px rgba(0.1, 0.1, 0.1, 0.1);
+          border-radius: 0px;
+          -webkit-transition: all 1s cubic-bezier(1, 1, 1, 1);
+          transition: all 1s cubic-bezier(1, 1, 1, 1);
+    }
+
+    .box::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          box-shadow: 0 0px 0px rgba(0.1, 0.1, 0.1, 0.1);
+          opacity: 0;
+          -webkit-transition: all 1s cubic-bezier(1, 1, 1, 1);
+          transition: all 1s cubic-bezier(1, 1, 1, 1);
+    }
+
+    .box:hover {
+            z-index: 2;
+            -webkit-transform: scale(1.10, 1.10);
+            transform: scale(1.10, 1.10);
+    }
+
+    .box:hover::after {
+            opacity: 1;
+    }
+</style>
+
+{% endblock extra_styles %}
+
+{% block main-content %}
+
+<div id="page">
+    <div class="pi-section-w pi-section-white">
+        <div class="pi-section">
+            <div class="pi-text-center pi-margin-bottom-50">
+                <h1 class="pi-uppercase pi-weight-700 pi-has-border pi-has-tall-border pi-has-short-border">Blog</h1>
+            </div>
+            <div class="pi-row pi-padding-bottom-20 grid" data-masonry='{ "itemSelector": ".grid-item" }'>
+
+                {% for feed in feeds %}  <!-- For Every Blog Post Repeat -->
+
+                    <div class="pi-col-sm-4 pi-col-xs-6 box grid-item">
+                        <div class="pi-portfolio-item pi-portfolio-description-box pi-portfolio-item-round-corners">
+                            <div class="pi-portfolio-description pi-portfolio-description-round-corners" style="border-top-width: 1px">
+                                <h2 class="h4"><a href="{{feed.id}}" class="pi-link-no-style">{{ feed.title }}</a></h2>
+                                <ul class="pi-portfolio-cats">
+                                    <li><i class="icon-calendar"></i>{{ feed.date|date:"M m Y"}}</li>
+                                    <li class="pull-right"><i class="icon-user"></i>{{ feed.author }}</li>
+                                </ul>
+                                <p> {{ feed.description|safe| truncatechars_html:300 }}</p>
+                            </div>
+                        </div>
+                   </div>
+
+                {% endfor %}  <!-- For loop end -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}
+
+
+{% block extra_scripts %}
+
+ <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+
+{% endblock extra_scripts %}
