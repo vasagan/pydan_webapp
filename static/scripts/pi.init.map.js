@@ -1,8 +1,9 @@
 jQuery(function($){
-
+		console.log("Calling!!");
 	//region Google Map
 	if($.fn.gMap){
 		$('.pi-google-map').each(function (i) {
+			console.log("Calling!!");
 			var $map = $(this),
 				markers = [],
 				type = $map.data('mapType') || 'roadmap',

@@ -5938,8 +5938,11 @@ iframe[src="about:blank"] {
   content: '\e8c5';
 }
 .pi-scroll-top-arrow.pi-active {
-  bottom: 40px;
+  /*PYD bottom: 40px;*/
+  bottom: 100px;
   opacity: 1;
+  background: #ffffff;
+  color:#000;
 }
 .pi-scroll-top-arrow.pi-active.pi-scroll-top-arrow-footer {
   bottom: 80px;

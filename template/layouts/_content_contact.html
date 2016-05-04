@@ -1,0 +1,125 @@
+{% load staticfiles %}
+<div id="anchor-contact" class="pi-section-w pi-section-white piICheck piStylishSelect piSocials">
+    <div class="pi-section">
+
+        <div class="pi-row">
+            <div class="pi-col-sm-6">
+                <h2 class="h4 pi-has-bg pi-weight-700 pi-uppercase pi-letter-spacing pi-margin-bottom-30">
+                    Get In Touch
+                </h2>
+
+                <!-- Contact form -->
+                <form role="form" action="handlers/formContact.php" class="pi-contact-form">
+
+                    <div class="pi-error-container"></div>
+
+                    <div class="pi-row pi-grid-small-margins">
+                        <div class="pi-col-sm-6">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Name *</label>
+                                <input type="text" class="form-control form-control-name" id="exampleInputName1"
+                                       placeholder="e.g. Alexander The Great ">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address *</label>
+                                <input type="email" class="form-control form-control-email" id="exampleInputEmail1"
+                                       placeholder="e.g. info@pydan.com">
+                            </div>
+
+                        </div>
+                        <div class="pi-col-sm-6">
+                            <div class="form-group">
+                                <label for="exampleInputCompany">Company Name</label>
+                                <input type="text" class="form-control form-control-company-name"
+                                       id="exampleInputCompany"
+                                       placeholder="e.g. PYDAN">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPhone">Phone</label>
+                                <input type="text" class="form-control form-control-phone" id="exampleInputPhone"
+                                       placeholder="e.g. +1 (121) 2121">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputMessage1">Message *</label>
+						<textarea class="form-control form-control-comments" id="exampleInputMessage1"
+                                  placeholder="How can we help?"
+                                  rows="3"></textarea>
+                    </div>
+                    <div class="form-group pi-padding-bottom-10">
+                        <script type="text/javascript">
+                            var RecaptchaOptions = {
+                                theme: 'clean'
+                            };
+                        </script>
+                        <script type="text/javascript"
+                                src="http://www.google.com/recaptcha/api/challenge?k=6LcQ-_USAAAAACuWYZck-TkqvxpqeptnCgasjQlJ">
+                        </script>
+                        <noscript>
+                            <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcQ-_USAAAAACuWYZck-TkqvxpqeptnCgasjQlJ"
+                                    height="300" width="500" frameborder="0"></iframe>
+                            <br>
+							<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+							</textarea>
+                            <input type="hidden" name="recaptcha_response_field"
+                                   value="manual_challenge">
+                        </noscript>
+                    </div>
+                    <p>
+                        <button class="btn pi-btn">
+                            Submit
+                        </button>
+                    </p>
+                </form>
+                <!-- End contact form -->
+
+            </div>
+            <div class="pi-col-sm-6">
+
+
+                <h2 class="h4 pi-has-bg pi-weight-700 pi-uppercase pi-letter-spacing pi-margin-bottom-30">
+                    Contact Us
+                </h2>
+
+                <p class="h6 pi-uppercase pi-weight-700 pi-padding-top-20">
+                    <i class="icon-location pi-text-base" style="margin-right: 5px;"></i> #G2, Srinidhi Regency,
+                    Sarjapur Main Road, Kasavanahalli, Bengaluru, Karnataka - 560035
+                </p>
+
+                <p class="h6 pi-uppercase pi-weight-700">
+                    <i class="icon-mail pi-text-base" style="margin-right: 5px;"></i> <a href="#" class="pi-link-dark">info@pydan.com</a>
+                </p>
+
+                <p class="h6 pi-uppercase pi-weight-700  pi-padding-bottom-30">
+                    <i class="icon-phone pi-text-base" style="margin-right: 5px;"></i> +91 88840 88890
+                </p>
+
+
+                <ul class="pi-social-icons pi-jump pi-colored-bg pi-small pi-round pi-padding-top-10  pi-padding-bottom-30">
+                    <li><a href="#" class="pi-social-icon-facebook"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#" class="pi-social-icon-twitter"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#" class="pi-social-icon-dribbble"><i class="icon-dribbble"></i></a></li>
+                    <li><a href="#" class="pi-social-icon-rss"><i class="icon-rss"></i></a></li>
+                </ul>
+
+                <div class="pi-google-map"
+                     data-map-type="roadmap"
+                     data-map-zoom="14"
+                     data-map-style="base"
+                     data-map-marker="{% static 'img/marker-base.png' %}"
+                     data-map-marker-size="67,81"
+                     data-map-marker-anchor="33,81"
+                     data-map-address="Srinidhi Regency, Sarjapur Main Road, Kasavanahalli, Bengaluru, Karnataka">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
