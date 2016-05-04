@@ -40,7 +40,11 @@
 </style>
 
 {% endblock extra_styles %}
-
+<!-- Menu -->
+{% block header %}
+    {% include 'layouts/header_external.html' %}
+{% endblock header %}
+<!-- End menu -->
 {% block main-content %}
 
 <div id="page">
@@ -81,3 +85,4 @@
  <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 
 {% endblock extra_scripts %}
+
