@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<div id="page">
+         <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+        {% block content_slider %}
+        {% include 'layouts/_content_slider.html' %}
+        {% endblock content_slider %}
+        <!-- - - - - - - - - - END SECTION - - - - - - - - - -->
+        <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+        {% block content_whatwedo %}
+        {% include 'layouts/_content_what_we_do.html' %}
+        {% endblock content_whatwedo %}
+        <!-- - - - - - - - - - END SECTION - - - - - - - - - -->
+        <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+        {% block content_services %}
+        {% include 'layouts/_content_services.html' %}
+        {% endblock content_services %}
+        <!-- - - - - - - - - - END SECTION - - - - - - - - - -->
+        <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+        {% block content_clients %}
+        {% include 'layouts/_content_clients.html' %}
+        {% endblock content_clients %}
+        <!-- - - - - - - - - - END SECTION - - - - - - - - - -->
+
+        <!-- - - - - - - - - - SECTION - - - - - - - - - -->
+
+</div>

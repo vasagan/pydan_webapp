@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<div class="pi-header">
+    <!-- Pre Header row -->
+    {% block header_pre %}
+        {% include 'layouts/_header_pre.html' %}
+    {% endblock header_pre %}
+    <!-- End Pre Header row -->
+
+    <div class="pi-header-sticky">
+        <!-- Header row -->
+        <div class="pi-section-w pi-section-white pi-shadow-bottom pi-row-reducible">
+            <div class="pi-section pi-row-lg">
+                <!-- Logo -->
+                <div class="pi-row-block pi-row-block-logo">
+                    <a href="index.html"><img src="{% static 'img/logo-base.png' %}" alt="PYDAN Consulting"></a>
+                </div>
+                <!-- End logo -->
+
+                <!-- Text -->
+                <div class="pi-row-block pi-row-block-txt pi-hidden-2xs">Python / Django Consultants</div>
+                <!-- End text -->
+
+                <!-- Menu -->
+                {% block header_menu %}
+                    {% include 'layouts/_header_menu.html' %}
+                {% endblock header_menu %}
+                <!-- End menu -->
+
+                <!-- Mobile menu -->
+                {% block header_mobile_menu %}
+                    {% include 'layouts/_header_mobile_menu.html' %}
+                {% endblock header_mobile_menu %}
+                <!-- End mobile menu -->
+            </div>
+        </div>
+        <!-- End header row -->
+    </div>
+</div>

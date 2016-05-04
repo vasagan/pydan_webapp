@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta & favicons -->
+    {% block meta %}
+        {% include 'layouts/meta.html' %}
+    {% endblock meta %}
+    <!-- End Meta & favicon -->
+
+    <!-- Main Style Sheets -->
+    {% block main_styles %}
+        {% include 'layouts/styles.html' %}
+    {% endblock main_styles %}
+    <!-- End Main Style Sheets -->
+    <!-- Extra Style Sheets -->
+    {% block extra_styles %}
+
+    {% endblock extra_styles %}
+    <!-- End Extra Style Sheets -->
+</head>
+<body>
+<div id="pi-all">
+    <!-- Header -->
+    {% block header %}
+        {% include 'layouts/header.html' %}
+    {% endblock header %}
+    <!-- End header -->
+    <!-- Content -->
+    {% block main-content %}
+    {% endblock main-content %}
+    <!-- End Content -->
+    <!-- Footer -->
+    {% block footer %}
+        {% include 'layouts/footer.html' %}
+    {% endblock footer %}
+    <!-- End footer -->
+</div>
+<div class="pi-scroll-top-arrow" data-scroll-to="0"></div>
+<!-- Main Scripts -->
+{% block main_scripts %}
+    {% include 'layouts/scripts.html' %}
+{% endblock main_scripts %}
+<!-- End Main Scripts -->
+<!-- Extra Scripts -->
+{% block extra_scripts %}
+
+{% endblock extra_scripts %}
+<!-- End Extra Scripts -->
+</body>
+</html>
