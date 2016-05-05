@@ -58,8 +58,7 @@
                             <div class="pi-portfolio-description pi-portfolio-description-round-corners" style="border-top-width: 1px">
                                 <h2 class="h4"><a href="{{feed.id}}" class="pi-link-no-style">{{ feed.title }}</a></h2>
                                 <ul class="pi-portfolio-cats">
-                                    <li><i class="icon-calendar"></i>{{ feed.date|date:"M m Y"}}</li>
-                                    <li class="pull-right"><i class="icon-user"></i>{{ feed.author }}</li>
+                                    <li><i class="icon-clock"></i>{{ feed.date|date:"f a M m Y"}}</li>
                                 </ul>
                                 <p> {{ feed.description|safe| truncatechars_html:300 }}</p>
                             </div>

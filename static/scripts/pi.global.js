@@ -1182,6 +1182,7 @@ jQuery(function($){
 
 
 /*_____ scripts/pi.init.submitFormContact.js*/
+
 jQuery(function($){
 
 	//region Init Footer Form submit
