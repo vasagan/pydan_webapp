@@ -72,7 +72,6 @@ jQuery(function($){
 			else
 			{
 
-				grecaptcha.reset();
 				$.ajax({
 					url: 'http://127.0.0.1:8000/contact',
 					dataType: 'json',
@@ -99,6 +98,12 @@ jQuery(function($){
 						$("#webpyd").modal('show');
 					}
 				});
+				$form.find('.form-control-name').val('');
+				$form.find('.form-control-email').val('');
+				$form.find('.form-control-company-name').val('');
+				$form.find('.form-control-phone').val('');
+				$form.find('.form-control-comments').val('');
+				grecaptcha.reset();
 			}
 		});
 	});
