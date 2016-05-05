@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <div id="anchor-contact" class="pi-section-w pi-section-white piICheck piStylishSelect piSocials">
     <div class="pi-section">
 
@@ -9,7 +10,8 @@
                 </h2>
 
                 <!-- Contact form -->
-                <form role="form" action="handlers/formContact.php" class="pi-contact-form">
+                <form role="form" action="" class="pi-contact-form">
+                    {% csrf_token %}
 
                     <div class="pi-error-container"></div>
 
@@ -53,7 +55,7 @@
                                   rows="3"></textarea>
                     </div>
                     <div class="form-group pi-padding-bottom-10">
-                        <script type="text/javascript">
+                   <!--     <script type="text/javascript">
                             var RecaptchaOptions = {
                                 theme: 'clean'
                             };
@@ -69,7 +71,8 @@
 							</textarea>
                             <input type="hidden" name="recaptcha_response_field"
                                    value="manual_challenge">
-                        </noscript>
+                        </noscript> -->
+                        <div class="g-recaptcha" data-sitekey="6LfzIR8TAAAAAJm5USCYllsCPO1_IEDQbu9Mohdw"></div>
                     </div>
                     <p>
                         <button class="btn pi-btn">
@@ -79,7 +82,8 @@
                 </form>
                 <!-- End contact form -->
 
-            </div>
+            </div><div class="g-recaptcha" data-sitekey="6LcZIx8TAAAAANJA97ohSWW2zwaM4qn6ffpPqFmr"></div>
+                    </
             <div class="pi-col-sm-6">
 
 
