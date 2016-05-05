@@ -27,7 +27,7 @@ def save_message(request):
 
 
 
-class SaveMessage(generics.ListCreateAPIView):
+class SaveMessage(generics.CreateAPIView):
     serializer_class = SaveMessageSerializer
     permission_classes = (permissions.AllowAny,)
 

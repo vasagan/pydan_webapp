@@ -2,7 +2,7 @@ jQuery(function($){
 
 	//region Init Footer Form submit
 	$('.pi-contact-form').submit(function(){
-
+		$(".pi-contact-form .pi-btn").prop('disabled', true);
 		var $form = $(this),
 			$error = $form.find('.pi-error-container'),
 			action  = $form.attr('action');
@@ -71,7 +71,6 @@ jQuery(function($){
 			}
 			else
 			{
-
 				$.ajax({
 					url: 'http://127.0.0.1:8000/contact',
 					dataType: 'json',
@@ -83,7 +82,7 @@ jQuery(function($){
 						"company": $company,
 						"phone": $phone,
 						"message": $comments,
-						"csrfmiddlewaretoken": $csrf_token,
+						//"csrfmiddlewaretoken": $csrf_token,
 						"captcha": $recaptcha.val()
 					}),
 					processData: false,
@@ -106,6 +105,7 @@ jQuery(function($){
 				grecaptcha.reset();
 			}
 		});
+		$(".pi-contact-form .pi-btn").prop('disabled', false);
 	});
 
 		return false;
