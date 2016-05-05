@@ -58,7 +58,7 @@ jQuery(function($){
 			$email = $email.val().trim();
 			$phone = $phone.val().trim();
 			if (!$recaptcha.val() || !$email || !$name || $name.length<5 || !$comments || $comments.length<20)  {
-				$(".modal-title").html('<p style="color:darkorange;">Oops! seems that you left something blank</p>');
+				$(".modal-title").html('<p style="color:darkblue;">Oops! seems that you left something blank</p>');
 				var $error_html = "<p>Please rectify one or more error(s) below<ul>";
 				if(!$name || $name.length<5){ $error_html = $error_html + "<li>Fill in your Name (at least 5 characters)</li>"}
 				if(!$email){ $error_html = $error_html + "<li>Fill in your valid E-mail</li>"}
@@ -87,8 +87,8 @@ jQuery(function($){
 					}),
 					processData: false,
 					success: function (data) {
-						$(".modal-title").html('<p style="color:darkgreen;">Aiy! We got your mail</p>');
-						$(".modal-body").html('<p>Hello '+ data['email']+', Thanks for reaching us. We will get back to you shortly. Have a nice day!</p>');
+						$(".modal-title").html('<p style="color:darkgreen;">Yay! We got your mail</p>');
+						$(".modal-body").html('<p>Hello '+ data['name']+', Thanks for writing to us. We will get back to you shortly. Have a nice day!</p>');
 						$("#webpyd").modal('show');
 					},
 					error: function () {
