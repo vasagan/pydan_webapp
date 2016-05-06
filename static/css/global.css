@@ -10073,3 +10073,13 @@ img {
   /* W3C */
 
 }
+
+
+.pi-gallery .pi-gallery-item img {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
+.pi-gallery .pi-gallery-item img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
