@@ -11,6 +11,11 @@
     <!-- Main Style Sheets -->
     {% block main_styles %}
         {% include 'layouts/styles.html' %}
+        <style>
+            .box:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+        </style>
     {% endblock main_styles %}
     <!-- End Main Style Sheets -->
     <!-- Extra Style Sheets -->
@@ -43,12 +48,30 @@
 <div class="pi-scroll-top-arrow" data-scroll-to="0"></div>
 <!-- Main Scripts -->
 {% block main_scripts %}
-    {% include 'layouts/scripts.html' %}
+        {% include 'layouts/scripts.html' %}
+
+    <!--  chat script -->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/572c4eaa986b9aee7173a0a4/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+    <!-- End Chat script -->
+
 {% endblock main_scripts %}
 <!-- End Main Scripts -->
+
 <!-- Extra Scripts -->
 {% block extra_scripts %}
+<!--Start of Tawk.to Script-->
 
+<!--End of Tawk.to Script-->
 {% endblock extra_scripts %}
 <!-- End Extra Scripts -->
 </body>
