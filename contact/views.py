@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from .models import *
 from rest_framework import generics, viewsets, serializers, permissions
 from .serializers import *
+from django.core.mail import send_mail
 # Create your views here.
 
 @api_view(['GET', 'POST'])
@@ -33,3 +34,8 @@ class SaveMessage(generics.CreateAPIView):
 
     def get_queryset(self):
         return Message.objects.all()
+"""
+    def  perform_create(self, serializer):
+        serializer.save()
+        send_mail('Test Email', 'Here is the message.', 'vasagan@orgbasket.com',['vasagant@gmail.com'], fail_silently=False)
+"""

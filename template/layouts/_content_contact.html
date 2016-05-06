@@ -9,6 +9,7 @@
                     Get In Touch
                 </h2>
 
+
                 <!-- Contact form -->
                 <form role="form" action="http://127.0.0.1:8000/contact" class="pi-contact-form">
                     {% csrf_token %}
@@ -72,17 +73,16 @@
                             <input type="hidden" name="recaptcha_response_field"
                                    value="manual_challenge">
                         </noscript> -->
-                        <div class="g-recaptcha" data-sitekey="6LfzIR8TAAAAAJm5USCYllsCPO1_IEDQbu9Mohdw"></div>
-                    </div>
-                    <p>
-                        <button class="btn pi-btn">
+                        <div class="g-recaptcha pi-padding-bottom-30" data-sitekey="6LfzIR8TAAAAAJm5USCYllsCPO1_IEDQbu9Mohdw"></div>
+                        <div><button class="btn pi-btn">
                             Submit
-                        </button>
-                    </p>
+                        </button></div>
+                    </div>
+
                 </form>
                 <!-- End contact form -->
+                </div>
 
-            </div>
             <div class="pi-col-sm-6">
 
 
@@ -90,30 +90,28 @@
                     Contact Us
                 </h2>
 
-                <p class="h6 pi-uppercase pi-weight-700 pi-padding-top-20">
+                <p class="h6 pi-weight-700">
                     <i class="icon-location pi-text-base" style="margin-right: 5px;"></i> #G2, Srinidhi Regency,
                     Sarjapur Main Road, Kasavanahalli, Bengaluru, Karnataka - 560035
                 </p>
 
-                <p class="h6 pi-uppercase pi-weight-700">
+                <p class="h6 pi-weight-700">
                     <i class="icon-mail pi-text-base" style="margin-right: 5px;"></i> <a href="#" class="pi-link-dark">info@pydan.com</a>
                 </p>
 
-                <p class="h6 pi-uppercase pi-weight-700  pi-padding-bottom-30">
+                <p class="h6 pi-uppercase pi-weight-700  pi-padding-bottom-10">
                     <i class="icon-phone pi-text-base" style="margin-right: 5px;"></i> +91 88840 88890
                 </p>
 
 
-                <ul class="pi-social-icons pi-jump pi-colored-bg pi-small pi-round pi-padding-top-10  pi-padding-bottom-30">
-                    <li><a href="#" class="pi-social-icon-facebook"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#" class="pi-social-icon-twitter"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#" class="pi-social-icon-dribbble"><i class="icon-dribbble"></i></a></li>
-                    <li><a href="#" class="pi-social-icon-rss"><i class="icon-rss"></i></a></li>
+                <ul class="pi-social-icons pi-jump pi-colored-bg pi-small pi-round  pi-padding-bottom-10">
+                    <li><a href="http://www.facebook.com/pydanindia/" class="pi-social-icon-facebook"><i class="icon-facebook"></i></a></li>
+                    <li><a href="http://twitter.com/pydan_" class="pi-social-icon-twitter"><i class="icon-twitter"></i></a></li>
                 </ul>
 
                 <div class="pi-google-map"
                      data-map-type="roadmap"
-                     data-map-zoom="14"
+                     data-map-zoom="10"
                      data-map-style="base"
                      data-map-marker="{% static 'img/marker-base.png' %}"
                      data-map-marker-size="67,81"

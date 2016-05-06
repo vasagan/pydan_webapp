@@ -9,6 +9,7 @@
 
 <!-- Box Zoom for Blog Posts. Move to css file if you want to reuse it. -->
 <style>
+/*
     .box {
           position: relative;
           display: inline-block;  z-index: 1;
@@ -36,6 +37,9 @@
 
     .box:hover::after {
             opacity: 1;
+    }  */
+    .box:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 </style>
 
@@ -57,8 +61,8 @@
 
                 {% for feed in feeds %}  <!-- For Every Blog Post Repeat -->
 
-                    <div class="pi-col-sm-4 pi-col-xs-6 box grid-item">
-                        <div class="pi-portfolio-item pi-portfolio-description-box pi-portfolio-item-round-corners">
+                    <div class="pi-col-sm-4 pi-col-xs-6 grid-item">
+                        <div class="pi-portfolio-item pi-portfolio-description-box pi-portfolio-item-round-corners box">
                             <div class="pi-portfolio-description pi-portfolio-description-round-corners" style="border-top-width: 1px">
                                 <h2 class="h4"><a href="{{feed.id}}" class="pi-link-no-style">{{ feed.title }}</a></h2>
                                 <ul class="pi-portfolio-cats">

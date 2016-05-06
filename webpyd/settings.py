@@ -104,6 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Email settings
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'vasagan@orgbasket.com'
+EMAIL_HOST_PASSWORD = 'MANIvas123'
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
